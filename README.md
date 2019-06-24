@@ -6,7 +6,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add-index|
+|name|string|null: false, index: true|
 
 ### Association
 - has_many :messages
@@ -16,7 +16,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add-index|
+|name|string|null: false|
 
 ### Association
 - has_many :messages

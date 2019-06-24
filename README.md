@@ -27,7 +27,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |users_id|integer|foreign_key: true|
-|group-id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true|
 
 ### Associatioon
 - belongs to :user
@@ -38,8 +38,8 @@
 |------|----|-------|
 |body|text|  |
 |image|string|  |
-|user-id|integer|  |
-|group-id|integer|  |
+|user_id|integer|  |
+|group_id|integer|  |
 
 ### Association
 - belongs to :user

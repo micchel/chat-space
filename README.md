@@ -1,5 +1,51 @@
 # README
 
+#データベース設計
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, add-index|
+
+### Association
+- has_many :messages
+- has_many :users_groups
+- has_many :groups, through: :users_groups
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, add-index|
+
+### Association
+- has_many :messages
+- has_many :users_groups
+- has_many :users, through: :users_groups
+
+##users_groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|users_id|integer|foreign_key: true|
+|group-id|integer|foreign_key: true|
+
+### Associatioon
+- belongs to :user
+- belongs to :group
+
+##messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false|
+|image|string|  |
+|user-id|integer|foreign_key: true|
+|group-id|integer|foreign_key: true|
+
+###Association
+- belongs to :user
+- belongs to :group
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

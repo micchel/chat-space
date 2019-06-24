@@ -36,7 +36,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text|  |
 |image|string|  |
 |user-id|integer|foreign_key: true|
 |group-id|integer|foreign_key: true|

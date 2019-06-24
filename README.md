@@ -1,6 +1,6 @@
 # README
 
-#データベース設計
+# データベース設計
 
 ## usersテーブル
 
@@ -23,7 +23,7 @@
 - has_many :users_groups
 - has_many :users, through: :users_groups
 
-##users_groupsテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |users_id|integer|foreign_key: true|
@@ -33,7 +33,7 @@
 - belongs to :user
 - belongs to :group
 
-##messagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
@@ -41,7 +41,7 @@
 |user-id|integer|foreign_key: true|
 |group-id|integer|foreign_key: true|
 
-###Association
+### Association
 - belongs to :user
 - belongs to :group
 

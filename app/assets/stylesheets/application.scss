@@ -1,13 +1,13 @@
-@import "reset";
-@import "variable";
-@import "flash-box";
-@import "chat-side";
-@import "chat-main";
-@import "form";
 @import "font-awesome";
-@import "user";
+@import "config/variable";
+@import "config/reset";
 @import "config/colors";
+@import "modules/chat-main";
+@import "modules/chat-side";
+@import "modules/form";
+@import "modules/user";
 @import "modules/flash";
+@import "modules/group";
 
 * {
   box-sizing: border-box;

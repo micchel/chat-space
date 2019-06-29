@@ -1,0 +1,37 @@
+.form {
+  height: 90px;
+  padding: 20px 40px 20px 40px;
+  background-color: #ddd;
+  display: flex;
+  &__text {
+    background-color: $white;
+    height: 50px;
+    line-height: 50px;
+    width: calc(100% - 150px);
+    border-style: none;
+  }
+  &__mask {
+    background-color: $white;
+    height: 50px;
+    padding-right: 10px;
+    &__image {
+      font-size: 20px;
+      line-height: 50px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  &__submit {
+    background-color: $light_blue;
+    height: 50px;
+    color: $white;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    border-style: none;
+    cursor: pointer;
+  }
+}

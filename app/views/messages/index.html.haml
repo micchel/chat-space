@@ -1,29 +1,25 @@
-.flash-box
-  .notice
-    グループを作成しました
 .wrapper
   = render 'shared/chat_side'
   .chat-main
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          ggg
+          = @group.name
         %ul.main-header__left-box__member-list
-          Member:
+          Member :
           %li.main-header__left-box__member-list__member
-            micchel
+            = @group.users.name
       .main-header__right-box
-        = link_to edit_group_path, class: "main-header__right-box__button"
-        .main-header_right-box__button
-          Edit
+        = link_to edit_group_path(@group), class: 'main-header__right-box__button' do
+          .main-header_right-box__button
+            Edit
     .messages
       = render @messages
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__text', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
             = fa_icon 'image'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class:'form__submit'
-
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class:'submit-btn'

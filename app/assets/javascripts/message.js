@@ -5,11 +5,11 @@ $(function() {
     var url = $(this).attr('action')
   })
   $.ajax({
-    type: "POST",
     url: url,
+    type: "POST",
     data: formData,
     dataType: 'json',
     processData: false,
-    contentType: false
+    contentType: false,
   })
 });

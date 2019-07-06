@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.where('name LIKE(?)',"%#{params[:name]}%").where.not(name: current_user.name)
+    @users = User.where('name LIKE(?)',"%#{params[:id]}%").where.not(id: current_user.id)
     respond_to do |format|
       format.html
       format.json

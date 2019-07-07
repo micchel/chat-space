@@ -13,7 +13,7 @@
   .groups
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do
-        .group
+        .group{data: {id: group.id}}
           %p.group__name
             = group.name
           %p.group__latest-message

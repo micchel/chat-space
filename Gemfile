@@ -36,6 +36,7 @@ gem 'mini_magick'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'haml-rails'
+gem 'fog-aws'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
